@@ -1,0 +1,32 @@
+body {
+
+}
+
+#wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+nav {
+  background-color: #FFB4B0;
+  width: 796px;
+  height: 65px;
+  border: 2px solid black;
+  margin-bottom: 15px;
+}
+
+.left-container {
+  float: left;
+  background-color: #4DD7FA;
+  width: 175px;
+  height: 350px;
+  border: 2px solid black;
+}
+
+.right-container {
+  float: right;
+  background-color: #FEFAC0;
+  width: 600px;
+  height: 350px;
+  border: 2px solid black;
+}
