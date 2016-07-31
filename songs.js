@@ -1,5 +1,5 @@
-var songs = [];
 var output = document.getElementById("output");
+var songs = [];
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
 songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
@@ -7,27 +7,18 @@ songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album Th
 songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
 songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
 
-function displaySongs () {
+songs.push("Big Red Car - by The Wiggles on the album Toot Toot");
+songs.unshift("Walk - by Pantera on the album Vulgar Display Of Power")
+
+
   for (var i = 0; i < songs.length; i++) {
-    output.innerHTML += "<h2>Song Name</h2>" + "<div>" + songs[i] + "</div>"
+    var redo = songs[i].replace(/[>]/g, "-").replace(/[*,@,!,(]/g, "")
+    console.log(redo)
+output.innerHTML += "<h2>Song</h2><div>" + redo + "</div>"
   }
-}
-
-function removeChar(removed){
-  var fixedSongs = [];
-  for (var i = 0; i < removed.length; i++) {
-    var newText = removed[i].replace(/[>]/g, "-").replace(/[*,@,!,(]/g, "")
-    fixedSongs.push(newText)
-    console.log(newText)
-  }
-  return fixedSongs;
-}
-
-output.innerHTML += "<h2>Song Name</h2>" + "<div>" + removeChar(songs) + "</div>"
 
 
 
-// output.innerHTML += newOutput
 
 
 
