@@ -14,7 +14,7 @@ songs.unshift("Walk - by Pantera on the album Vulgar Display Of Power")
   for (var i = 0; i < songs.length; i++) {
     var redo = songs[i].replace(/[>]/g, "-").replace(/[*,@,!,(]/g, "")
     console.log(redo)
-output.innerHTML += "<h2>Song</h2><div>" + redo + "</div>"
+output.innerHTML += "<h2>Song, Artist, Album</h2><div>" + redo + "</div>"
   }
 
 
