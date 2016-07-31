@@ -41,7 +41,7 @@ h2 {
   float: left;
   background-color: #4DD7FA;
   width: 175px;
-  height: 315px;
+  height: 367px;
   border: 2px solid black;
 }
 
@@ -49,8 +49,9 @@ h2 {
   float: right;
   background-color: #FEFAC0;
   width: 600px;
-  height: 315px;
+  /*height: 315px;*/
   border: 2px solid black;
+  padding: 0 0 10px 10px;
 }
 
 p {
