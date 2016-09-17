@@ -12,11 +12,13 @@
   <div id="wrapper">
     <nav>
       <ul>
-        <li>View Music</li>|
-        <li><a href="">Add Music</a></li>|
-        <li><a href="">Profile</a></li>
+        <li><a href="#" id="link-list">List Music</a></li>|
+        <li><a href="#" id="link-add">Add Music</a></li>
       </ul>
     </nav>
+
+
+    <section class="hidden" id="list-view">
     <div class="left-container">
       <div class="pad">
         <p>Song Length:</p>
@@ -54,12 +56,24 @@
 
     </div>
     <div class="right-container">
-      <div id="output">
+      <div id="output" class="Content">
+      </div>
+      </div>
+</section>
 
-      <div>
-  </div>
+<section class="hidden" id="add-view">
+<div id="add-section">
+  Song Name:<input type="text" name="song-name" class="add-section">
+Artist:<input type="text" name="artist" class="add-section">
+Album:<input type="text" name="album" class="add-section">
+<input type="button" name="add-music" id="add-music" value="add" class="add-section">
+</div>
+</section>
 
+
+  <script src="handle.js"></script>
   <script src="songs.js"></script>
+  <script src="add.js"></script>
 </body>
 </html>
 

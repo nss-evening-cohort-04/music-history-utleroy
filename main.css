@@ -2,6 +2,18 @@ body {
 
 }
 
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.add-section {
+  display: block;
+}
+
 #wrapper {
   max-width: 800px;
   margin: auto;
@@ -70,6 +82,13 @@ p {
 button {
   width: 100px;
   margin-left: 33px;
+}
+
+.Content
+{
+  height:224px;
+   overflow:auto;
+    background:#FEFAC0;
 }
 
 
