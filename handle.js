@@ -1,7 +1,5 @@
 var listLink = document.getElementById("link-list");
 var listView = document.getElementById("list-view");
-var addLink = document.getElementById("link-add");
-var addView = document.getElementById("add-view");
 
 listLink.addEventListener("click", function(event) {
   event.preventDefault();
@@ -11,6 +9,8 @@ listLink.addEventListener("click", function(event) {
   listView.classList.remove("hidden");
 });
 
+var addLink = document.getElementById("link-add");
+var addView = document.getElementById("add-view");
 
 addLink.addEventListener("click", function() {
   listView.classList.add("hidden");
