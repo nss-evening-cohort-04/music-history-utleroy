@@ -1,5 +1,5 @@
 body {
-
+  margin: auto;
 }
 
 .visible {
@@ -15,8 +15,10 @@ body {
 }
 
 #wrapper {
+  /*background-color: lightblue;*/
   max-width: 800px;
-  margin: auto;
+  height: 100%;
+  z-index: -10;
 }
 
 nav {
@@ -61,7 +63,7 @@ h2 {
   float: right;
   background-color: #FEFAC0;
   width: 600px;
-  /*height: 315px;*/
+  height: 355px;
   border: 2px solid black;
   padding: 0 0 10px 10px;
 }
@@ -86,7 +88,7 @@ p {
 
 .Content
 {
-  height:224px;
+  height:100%;
    overflow:auto;
     background:#FEFAC0;
 }

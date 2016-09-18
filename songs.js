@@ -1,18 +1,42 @@
-var output = document.getElementById("output");
-var songs = [];
 
-songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
-songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
-songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
-songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
+var currentSong;
+  var songsToDOM = [];
 
-songs.push("Big Red Car - by The Wiggles on the album Toot Toot");
-songs.unshift("Walk - by Pantera on the album Vulgar Display Of Power")
+  function loadSongs () {
+    var songElement = document.getElementById("output");
+    songData = JSON.parse(this.response);
+      for (var i = 0; i < songData.songs.length; i++) {
+        currentSong = songData.songs[i];
+        console.log(songData);
+
+        songsToDOM += `<h4>`
+        	songsToDOM += `${currentSong.title} - by `;
+        	songsToDOM += `${currentSong.artist} on the album `;
+        	songsToDOM += `${currentSong.album}`;
+        	songsToDOM += `<button id="remove">delete</button>`
+        songsToDOM += `</h4>`
+
+      }
+        songElement.innerHTML = songsToDOM;
 
 
-for (var i = 0; i < songs.length; i++) {
-	var display = songs[i].replace(/[>]/g, "-").replace(/[*,@,!,(]/g, "")
-	console.log(display)
-	output.innerHTML += "<h4>" + display + "</h4>"
-}
+  console.log(songsCall);
+  }
+
+  var songsCall = new XMLHttpRequest();
+  songsCall.addEventListener("load", loadSongs)
+  songsCall.open("GET", "songs.JSON");
+  songsCall.send();
+
+// var deleteBtn = document.getElementById("remove");
+// deleteBtn.addEventListener("click", function deleteMsg(){
+// 	currentSong.parentNode.removeChild(currentSong);
+// })
+
+// Add delete button DOM to each row and, when it is clicked, delete the entire row in the DOM.
+// Part Two
+
+// Take your music and split it into two JSON file instead of them all living on one file.
+// Add a button at the bottom of your music list and label it "More >".
+// Load the data from the first list and inject the DOM into the document as you've already done.
+// When the user clicks that button, load the songs from the second JSON file and append them to the bottom of the existing music, but before the More button.
