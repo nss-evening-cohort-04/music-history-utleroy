@@ -1,37 +1,37 @@
 
 var currentSong;
-  var songsToDOM = [];
+var songsToDOM = [];
 
-  function loadSongs () {
-    var songElement = document.getElementById("output");
-    songData = JSON.parse(this.response);
-      for (var i = 0; i < songData.songs.length; i++) {
-        currentSong = songData.songs[i];
-        console.log(songData);
+function loadSongs () {
+	var songElement = document.getElementById("output");
+	songData = JSON.parse(this.response);
+	for (var i = 0; i < songData.songs.length; i++) {
+		currentSong = songData.songs[i];
+		console.log(songData);
 
-        songsToDOM += `<h4>`
-        	songsToDOM += `${currentSong.title} - by `;
-        	songsToDOM += `${currentSong.artist} on the album `;
-        	songsToDOM += `${currentSong.album}`;
-        	songsToDOM += `<button id="remove">delete</button>`
-        songsToDOM += `</h4>`
+		songsToDOM += `<h4>`
+		songsToDOM += `${currentSong.title} - by `;
+		songsToDOM += `${currentSong.artist} on the album `;
+		songsToDOM += `${currentSong.album}`;
+		songsToDOM += `<button id="remove">delete</button>`;
+		songsToDOM += `</h4>`;
 
-      }
-        songElement.innerHTML = songsToDOM;
+	}
+	songElement.innerHTML = songsToDOM;
 
 
-  console.log(songsCall);
-  }
+	console.log(songsCall);
+}
 
-  var songsCall = new XMLHttpRequest();
-  songsCall.addEventListener("load", loadSongs)
-  songsCall.open("GET", "songs.JSON");
-  songsCall.send();
+var songsCall = new XMLHttpRequest();
+songsCall.addEventListener("load", loadSongs)
+songsCall.open("GET", "songs.JSON");
+songsCall.send();
 
-// var deleteBtn = document.getElementById("remove");
-// deleteBtn.addEventListener("click", function deleteMsg(){
-// 	currentSong.parentNode.removeChild(currentSong);
-// })
+var deleteBtn = document.getElementById("remove");
+deleteBtn.addEventListener("click", function deleteMsg(){
+	currentSong.parentNode.removeChild(currentSong);
+})
 
 // Add delete button DOM to each row and, when it is clicked, delete the entire row in the DOM.
 // Part Two
