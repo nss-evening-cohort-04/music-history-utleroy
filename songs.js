@@ -28,10 +28,18 @@ songsCall.addEventListener("load", loadSongs)
 songsCall.open("GET", "songs.JSON");
 songsCall.send();
 
-var deleteBtn = document.getElementById("remove");
-deleteBtn.addEventListener("click", function deleteMsg(){
-	currentSong.parentNode.removeChild(currentSong);
-})
+function deleteBtn(event) {
+   var thisCard = event.target.parentElement;
+  container.removeChild(thisCard)
+}
+
+function deleteBtnEventListener() {
+	for(var i = 0; i < erase.length; i++) {
+		var gone = document.getElementsByClassName("delete")
+		   for( var j = 0; j < gone.length; j++)
+		   	gone[j].addEventListener("click", deleteBtn)
+	}
+}
 
 // Add delete button DOM to each row and, when it is clicked, delete the entire row in the DOM.
 // Part Two
